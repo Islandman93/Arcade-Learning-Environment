@@ -231,7 +231,7 @@ static float
 DBtoLIN(float dB)
 {
     if (dB > 0) {
-	float val = 32768 * pow(10.0, (dB - 87) / 20 - 3);
+	float val = 32768 * pow(float(10.0), (dB - 87) / 20 - 3);
 	FPCHECK(val);
 	return val;
     }

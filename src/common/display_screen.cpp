@@ -15,6 +15,9 @@
  **************************************************************************** */
 #include "display_screen.h"
 #include "SoundSDL.hxx"
+#if (defined(WIN32) || defined(__MINGW32__))
+	#include <algorithm>
+#endif
 using namespace std;
 #ifdef __USE_SDL
 DisplayScreen::DisplayScreen(MediaSource* mediaSource,

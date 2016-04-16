@@ -2,15 +2,30 @@
 # Author: Ben Goodrich
 # This directly implements a python version of the arcade learning
 # environment interface.
+# For linux: requires libale_c.so
+# For windows: requires ale_python_interface.dll
 __all__ = ['ALEInterface']
 
 from ctypes import *
 import numpy as np
 from numpy.ctypeslib import as_ctypes
 import os
+import sys
+import inspect
 
-ale_lib = cdll.LoadLibrary(os.path.join(os.path.dirname(__file__),
-                                        'libale_c.so'))
+# check which operating system we are in
+if sys.platform.startswith('linux2'):
+    ale_lib = cdll.LoadLibrary('libale_c.so')
+elif sys.platform.startswith('win32'):
+    # we have to change dir to import the dlls ale_python_interface needs
+    cwd = os.getcwd()
+    # comes from http://stackoverflow.com/questions/50499/how-do-i-get-the-path-and-name-of-the-file-that-is-currently-executing
+    os.chdir(os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))))  # script directory
+    ale_lib = cdll.LoadLibrary('ale_python_interface.dll')
+    os.chdir(cwd)
+else:
+    raise NotImplementedError('learningALE is not supported for your system. Got {0}, expected: linux2 or win32'
+                              .format(sys.platform))
 
 ale_lib.ALE_new.argtypes = None
 ale_lib.ALE_new.restype = c_void_p

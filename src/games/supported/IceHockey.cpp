@@ -14,6 +14,9 @@
 #include "../RomUtils.hpp"
 using namespace std;
 
+#if (defined(WIN32) || defined(__MINGW32__))
+	#include <algorithm>
+#endif
 
 IceHockeySettings::IceHockeySettings() {
 

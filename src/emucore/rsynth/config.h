@@ -131,7 +131,12 @@
 #define HAVE_TRUNCATE 1
 
 /* Define to 1 if you have the <unistd.h> header file. */
+#if (defined(WIN32) || defined(__MINGW32__))
+#define HAVE_UNISTD_H 0
+#else
 #define HAVE_UNISTD_H 1
+#endif
+
 
 /* No float prototype */
 /* #undef NOPROTOFLOAT */

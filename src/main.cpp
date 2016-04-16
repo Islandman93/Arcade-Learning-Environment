@@ -28,10 +28,10 @@
 #else
 #   include "os_dependent/SettingsUNIX.hxx"
 #   include "os_dependent/OSystemUNIX.hxx"
+#   include "controllers/fifo_controller.hpp"
 #endif
 
 #include "controllers/ale_controller.hpp"
-#include "controllers/fifo_controller.hpp"
 #include "controllers/rlglue_controller.hpp"
 #include "common/Constants.h"
 #include "ale_interface.hpp"
@@ -44,14 +44,16 @@ static ALEController* createController(OSystem* osystem, std::string type) {
     std::cerr << "You must specify a controller type (via -game_controller)." << std::endl;
     exit(1);
   }
+#if (!defined(WIN32) && !defined(__MINGW32__))
   else if (type == "fifo") {
-    std::cerr << "Game will be controlled through FIFO pipes." << std::endl;
-    return new FIFOController(osystem, false);
-  } 
-  else if (type == "fifo_named") {
-    std::cerr << "Game will be controlled through named FIFO pipes." << std::endl;
-    return new FIFOController(osystem, true);
+	  std::cerr << "Game will be controlled through FIFO pipes." << std::endl;
+	  return new FIFOController(osystem, false);
   }
+  else if (type == "fifo_named") {
+	  std::cerr << "Game will be controlled through named FIFO pipes." << std::endl;
+	  return new FIFOController(osystem, true);
+  }
+#endif
   else if (type == "rlglue") {
     std::cerr << "Game will be controlled through RL-Glue." << std::endl;
     return new RLGlueController(osystem); 

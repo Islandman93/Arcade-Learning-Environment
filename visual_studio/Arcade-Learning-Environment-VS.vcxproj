@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\emucore\rsynth\Elements.def" />
+    <None Include="..\src\emucore\rsynth\phones.def" />
+    <None Include="..\src\emucore\rsynth\phtoelm.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ale_interface.cpp" />
+    <ClCompile Include="..\src\common\ColourPalette.cpp" />
+    <ClCompile Include="..\src\common\Constants.cpp" />
+    <ClCompile Include="..\src\common\display_screen.cpp" />
+    <ClCompile Include="..\src\common\Log.cpp" />
+    <ClCompile Include="..\src\common\ScreenExporter.cpp" />
+    <ClCompile Include="..\src\common\SoundExporter.cpp" />
+    <ClCompile Include="..\src\common\SoundNull.cxx" />
+    <ClCompile Include="..\src\common\SoundSDL.cxx" />
+    <ClCompile Include="..\src\controllers\ale_controller.cpp" />
+    <ClCompile Include="..\src\controllers\rlglue_controller.cpp" />
+    <ClCompile Include="..\src\emucore\AtariVox.cxx" />
+    <ClCompile Include="..\src\emucore\Booster.cxx" />
+    <ClCompile Include="..\src\emucore\Cart.cxx" />
+    <ClCompile Include="..\src\emucore\Cart0840.cxx" />
+    <ClCompile Include="..\src\emucore\Cart2K.cxx" />
+    <ClCompile Include="..\src\emucore\Cart3E.cxx" />
+    <ClCompile Include="..\src\emucore\Cart3F.cxx" />
+    <ClCompile Include="..\src\emucore\Cart4A50.cxx" />
+    <ClCompile Include="..\src\emucore\Cart4K.cxx" />
+    <ClCompile Include="..\src\emucore\CartAR.cxx" />
+    <ClCompile Include="..\src\emucore\CartCV.cxx" />
+    <ClCompile Include="..\src\emucore\CartDPC.cxx" />
+    <ClCompile Include="..\src\emucore\CartE0.cxx" />
+    <ClCompile Include="..\src\emucore\CartE7.cxx" />
+    <ClCompile Include="..\src\emucore\CartF4.cxx" />
+    <ClCompile Include="..\src\emucore\CartF4SC.cxx" />
+    <ClCompile Include="..\src\emucore\CartF6.cxx" />
+    <ClCompile Include="..\src\emucore\CartF6SC.cxx" />
+    <ClCompile Include="..\src\emucore\CartF8.cxx" />
+    <ClCompile Include="..\src\emucore\CartF8SC.cxx" />
+    <ClCompile Include="..\src\emucore\CartFASC.cxx" />
+    <ClCompile Include="..\src\emucore\CartFE.cxx" />
+    <ClCompile Include="..\src\emucore\CartMB.cxx" />
+    <ClCompile Include="..\src\emucore\CartMC.cxx" />
+    <ClCompile Include="..\src\emucore\CartUA.cxx" />
+    <ClCompile Include="..\src\emucore\Console.cxx" />
+    <ClCompile Include="..\src\emucore\Control.cxx" />
+    <ClCompile Include="..\src\emucore\Deserializer.cxx" />
+    <ClCompile Include="..\src\emucore\Driving.cxx" />
+    <ClCompile Include="..\src\emucore\Event.cxx" />
+    <ClCompile Include="..\src\emucore\FSNode.cxx" />
+    <ClCompile Include="..\src\emucore\Joystick.cxx" />
+    <ClCompile Include="..\src\emucore\Keyboard.cxx" />
+    <ClCompile Include="..\src\emucore\m6502\src\Device.cxx" />
+    <ClCompile Include="..\src\emucore\m6502\src\M6502.cxx" />
+    <ClCompile Include="..\src\emucore\m6502\src\M6502Hi.cxx" />
+    <ClCompile Include="..\src\emucore\m6502\src\M6502Low.cxx" />
+    <ClCompile Include="..\src\emucore\m6502\src\NullDev.cxx" />
+    <ClCompile Include="..\src\emucore\m6502\src\System.cxx" />
+    <ClCompile Include="..\src\emucore\M6532.cxx" />
+    <ClCompile Include="..\src\emucore\MD5.cxx" />
+    <ClCompile Include="..\src\emucore\MediaSrc.cxx" />
+    <ClCompile Include="..\src\emucore\OSystem.cxx" />
+    <ClCompile Include="..\src\emucore\Paddles.cxx" />
+    <ClCompile Include="..\src\emucore\Props.cxx" />
+    <ClCompile Include="..\src\emucore\PropsSet.cxx" />
+    <ClCompile Include="..\src\emucore\Random.cxx" />
+    <ClCompile Include="..\src\emucore\rsynth\darray.c" />
+    <ClCompile Include="..\src\emucore\rsynth\elements.c" />
+    <ClCompile Include="..\src\emucore\rsynth\holmes.c" />
+    <ClCompile Include="..\src\emucore\rsynth\opsynth.c" />
+    <ClCompile Include="..\src\emucore\rsynth\phones.c" />
+    <ClCompile Include="..\src\emucore\rsynth\phtoelm.c" />
+    <ClCompile Include="..\src\emucore\rsynth\trie.c" />
+    <ClCompile Include="..\src\emucore\Serializer.cxx" />
+    <ClCompile Include="..\src\emucore\Settings.cxx" />
+    <ClCompile Include="..\src\emucore\SpeakJet.cxx" />
+    <ClCompile Include="..\src\emucore\Switches.cxx" />
+    <ClCompile Include="..\src\emucore\TIA.cxx" />
+    <ClCompile Include="..\src\emucore\TIASnd.cxx" />
+    <ClCompile Include="..\src\emucore\unzip.c" />
+    <ClCompile Include="..\src\environment\ale_state.cpp" />
+    <ClCompile Include="..\src\environment\phosphor_blend.cpp" />
+    <ClCompile Include="..\src\environment\stella_environment.cpp" />
+    <ClCompile Include="..\src\external\TinyMT\tinymt32.c" />
+    <ClCompile Include="..\src\games\Roms.cpp" />
+    <ClCompile Include="..\src\games\RomSettings.cpp" />
+    <ClCompile Include="..\src\games\RomUtils.cpp" />
+    <ClCompile Include="..\src\games\supported\AirRaid.cpp" />
+    <ClCompile Include="..\src\games\supported\Alien.cpp" />
+    <ClCompile Include="..\src\games\supported\Amidar.cpp" />
+    <ClCompile Include="..\src\games\supported\Assault.cpp" />
+    <ClCompile Include="..\src\games\supported\Asterix.cpp" />
+    <ClCompile Include="..\src\games\supported\Asteroids.cpp" />
+    <ClCompile Include="..\src\games\supported\Atlantis.cpp" />
+    <ClCompile Include="..\src\games\supported\BankHeist.cpp" />
+    <ClCompile Include="..\src\games\supported\BattleZone.cpp" />
+    <ClCompile Include="..\src\games\supported\BeamRider.cpp" />
+    <ClCompile Include="..\src\games\supported\Berzerk.cpp" />
+    <ClCompile Include="..\src\games\supported\Bowling.cpp" />
+    <ClCompile Include="..\src\games\supported\Boxing.cpp" />
+    <ClCompile Include="..\src\games\supported\Breakout.cpp" />
+    <ClCompile Include="..\src\games\supported\Carnival.cpp" />
+    <ClCompile Include="..\src\games\supported\Centipede.cpp" />
+    <ClCompile Include="..\src\games\supported\ChopperCommand.cpp" />
+    <ClCompile Include="..\src\games\supported\CrazyClimber.cpp" />
+    <ClCompile Include="..\src\games\supported\Defender.cpp" />
+    <ClCompile Include="..\src\games\supported\DemonAttack.cpp" />
+    <ClCompile Include="..\src\games\supported\DonkeyKong.cpp" />
+    <ClCompile Include="..\src\games\supported\DoubleDunk.cpp" />
+    <ClCompile Include="..\src\games\supported\ElevatorAction.cpp" />
+    <ClCompile Include="..\src\games\supported\Enduro.cpp" />
+    <ClCompile Include="..\src\games\supported\FishingDerby.cpp" />
+    <ClCompile Include="..\src\games\supported\Freeway.cpp" />
+    <ClCompile Include="..\src\games\supported\Frogger.cpp" />
+    <ClCompile Include="..\src\games\supported\Frostbite.cpp" />
+    <ClCompile Include="..\src\games\supported\Galaxian.cpp" />
+    <ClCompile Include="..\src\games\supported\Gopher.cpp" />
+    <ClCompile Include="..\src\games\supported\Gravitar.cpp" />
+    <ClCompile Include="..\src\games\supported\Hero.cpp" />
+    <ClCompile Include="..\src\games\supported\IceHockey.cpp" />
+    <ClCompile Include="..\src\games\supported\JamesBond.cpp" />
+    <ClCompile Include="..\src\games\supported\JourneyEscape.cpp" />
+    <ClCompile Include="..\src\games\supported\Kangaroo.cpp" />
+    <ClCompile Include="..\src\games\supported\KeystoneKapers.cpp" />
+    <ClCompile Include="..\src\games\supported\Kingkong.cpp" />
+    <ClCompile Include="..\src\games\supported\Koolaid.cpp" />
+    <ClCompile Include="..\src\games\supported\Krull.cpp" />
+    <ClCompile Include="..\src\games\supported\KungFuMaster.cpp" />
+    <ClCompile Include="..\src\games\supported\LaserGates.cpp" />
+    <ClCompile Include="..\src\games\supported\LostLuggage.cpp" />
+    <ClCompile Include="..\src\games\supported\MontezumaRevenge.cpp" />
+    <ClCompile Include="..\src\games\supported\MrDo.cpp" />
+    <ClCompile Include="..\src\games\supported\MsPacman.cpp" />
+    <ClCompile Include="..\src\games\supported\NameThisGame.cpp" />
+    <ClCompile Include="..\src\games\supported\Phoenix.cpp" />
+    <ClCompile Include="..\src\games\supported\Pitfall.cpp" />
+    <ClCompile Include="..\src\games\supported\Pong.cpp" />
+    <ClCompile Include="..\src\games\supported\Pooyan.cpp" />
+    <ClCompile Include="..\src\games\supported\PrivateEye.cpp" />
+    <ClCompile Include="..\src\games\supported\QBert.cpp" />
+    <ClCompile Include="..\src\games\supported\RiverRaid.cpp" />
+    <ClCompile Include="..\src\games\supported\RoadRunner.cpp" />
+    <ClCompile Include="..\src\games\supported\RoboTank.cpp" />
+    <ClCompile Include="..\src\games\supported\Seaquest.cpp" />
+    <ClCompile Include="..\src\games\supported\SirLancelot.cpp" />
+    <ClCompile Include="..\src\games\supported\Skiing.cpp" />
+    <ClCompile Include="..\src\games\supported\Solaris.cpp" />
+    <ClCompile Include="..\src\games\supported\SpaceInvaders.cpp" />
+    <ClCompile Include="..\src\games\supported\StarGunner.cpp" />
+    <ClCompile Include="..\src\games\supported\Tennis.cpp" />
+    <ClCompile Include="..\src\games\supported\Tetris.cpp" />
+    <ClCompile Include="..\src\games\supported\TimePilot.cpp" />
+    <ClCompile Include="..\src\games\supported\Trondead.cpp" />
+    <ClCompile Include="..\src\games\supported\Turmoil.cpp" />
+    <ClCompile Include="..\src\games\supported\Tutankham.cpp" />
+    <ClCompile Include="..\src\games\supported\UpNDown.cpp" />
+    <ClCompile Include="..\src\games\supported\Venture.cpp" />
+    <ClCompile Include="..\src\games\supported\VideoPinball.cpp" />
+    <ClCompile Include="..\src\games\supported\WizardOfWor.cpp" />
+    <ClCompile Include="..\src\games\supported\YarsRevenge.cpp" />
+    <ClCompile Include="..\src\games\supported\Zaxxon.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\os_dependent\FSNodeWin32.cxx" />
+    <ClCompile Include="..\src\os_dependent\OSystemWin32.cxx" />
+    <ClCompile Include="..\src\os_dependent\SettingsUNIX.cxx" />
+    <ClCompile Include="..\src\os_dependent\SettingsWin32.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ale_interface.hpp" />
+    <ClInclude Include="..\src\common\Array.hxx" />
+    <ClInclude Include="..\src\common\ColourPalette.hpp" />
+    <ClInclude Include="..\src\common\Constants.h" />
+    <ClInclude Include="..\src\common\display_screen.h" />
+    <ClInclude Include="..\src\common\Log.hpp" />
+    <ClInclude Include="..\src\common\misc_tools.h" />
+    <ClInclude Include="..\src\common\Palettes.hpp" />
+    <ClInclude Include="..\src\common\ScreenExporter.hpp" />
+    <ClInclude Include="..\src\common\SoundExporter.hpp" />
+    <ClInclude Include="..\src\common\SoundNull.hxx" />
+    <ClInclude Include="..\src\common\SoundSDL.hxx" />
+    <ClInclude Include="..\src\common\Version.hxx" />
+    <ClInclude Include="..\src\common\VideoModeList.hxx" />
+    <ClInclude Include="..\src\controllers\ale_controller.hpp" />
+    <ClInclude Include="..\src\controllers\rlglue_controller.hpp" />
+    <ClInclude Include="..\src\dependencies\include\begin_code.h" />
+    <ClInclude Include="..\src\dependencies\include\close_code.h" />
+    <ClInclude Include="..\src\dependencies\include\deflate.h" />
+    <ClInclude Include="..\src\dependencies\include\gzguts.h" />
+    <ClInclude Include="..\src\dependencies\include\inffast.h" />
+    <ClInclude Include="..\src\dependencies\include\inffixed.h" />
+    <ClInclude Include="..\src\dependencies\include\inflate.h" />
+    <ClInclude Include="..\src\dependencies\include\inftrees.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_active.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_audio.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_byteorder.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_cdrom.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config_dreamcast.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config_macos.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config_macosx.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config_minimal.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config_nds.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config_os2.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config_symbian.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_config_win32.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_copying.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_cpuinfo.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_endian.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_error.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_events.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_getenv.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_joystick.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_keyboard.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_keysym.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_loadso.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_main.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_mouse.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_mutex.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_name.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_opengl.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_platform.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_quit.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_rwops.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_stdinc.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_syswm.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_thread.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_timer.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_types.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_version.h" />
+    <ClInclude Include="..\src\dependencies\include\SDL_video.h" />
+    <ClInclude Include="..\src\dependencies\include\trees.h" />
+    <ClInclude Include="..\src\dependencies\include\zconf.h" />
+    <ClInclude Include="..\src\dependencies\include\zlib.h" />
+    <ClInclude Include="..\src\dependencies\include\zutil.h" />
+    <ClInclude Include="..\src\emucore\AtariVox.hxx" />
+    <ClInclude Include="..\src\emucore\Booster.hxx" />
+    <ClInclude Include="..\src\emucore\Cart.hxx" />
+    <ClInclude Include="..\src\emucore\Cart0840.hxx" />
+    <ClInclude Include="..\src\emucore\Cart2K.hxx" />
+    <ClInclude Include="..\src\emucore\Cart3E.hxx" />
+    <ClInclude Include="..\src\emucore\Cart3F.hxx" />
+    <ClInclude Include="..\src\emucore\Cart4A50.hxx" />
+    <ClInclude Include="..\src\emucore\Cart4K.hxx" />
+    <ClInclude Include="..\src\emucore\CartAR.hxx" />
+    <ClInclude Include="..\src\emucore\CartCV.hxx" />
+    <ClInclude Include="..\src\emucore\CartDPC.hxx" />
+    <ClInclude Include="..\src\emucore\CartE0.hxx" />
+    <ClInclude Include="..\src\emucore\CartE7.hxx" />
+    <ClInclude Include="..\src\emucore\CartF4.hxx" />
+    <ClInclude Include="..\src\emucore\CartF4SC.hxx" />
+    <ClInclude Include="..\src\emucore\CartF6.hxx" />
+    <ClInclude Include="..\src\emucore\CartF6SC.hxx" />
+    <ClInclude Include="..\src\emucore\CartF8.hxx" />
+    <ClInclude Include="..\src\emucore\CartF8SC.hxx" />
+    <ClInclude Include="..\src\emucore\CartFASC.hxx" />
+    <ClInclude Include="..\src\emucore\CartFE.hxx" />
+    <ClInclude Include="..\src\emucore\CartMB.hxx" />
+    <ClInclude Include="..\src\emucore\CartMC.hxx" />
+    <ClInclude Include="..\src\emucore\CartUA.hxx" />
+    <ClInclude Include="..\src\emucore\Console.hxx" />
+    <ClInclude Include="..\src\emucore\Control.hxx" />
+    <ClInclude Include="..\src\emucore\DefProps.hxx" />
+    <ClInclude Include="..\src\emucore\Deserializer.hxx" />
+    <ClInclude Include="..\src\emucore\Driving.hxx" />
+    <ClInclude Include="..\src\emucore\Event.hxx" />
+    <ClInclude Include="..\src\emucore\FSNode.hxx" />
+    <ClInclude Include="..\src\emucore\Joystick.hxx" />
+    <ClInclude Include="..\src\emucore\Keyboard.hxx" />
+    <ClInclude Include="..\src\emucore\m6502\src\bspf\src\bspf.hxx" />
+    <ClInclude Include="..\src\emucore\m6502\src\Device.hxx" />
+    <ClInclude Include="..\src\emucore\m6502\src\M6502.hxx" />
+    <ClInclude Include="..\src\emucore\m6502\src\M6502Hi.hxx" />
+    <ClInclude Include="..\src\emucore\m6502\src\M6502Low.hxx" />
+    <ClInclude Include="..\src\emucore\m6502\src\NullDev.hxx" />
+    <ClInclude Include="..\src\emucore\m6502\src\System.hxx" />
+    <ClInclude Include="..\src\emucore\M6532.hxx" />
+    <ClInclude Include="..\src\emucore\MD5.hxx" />
+    <ClInclude Include="..\src\emucore\MediaSrc.hxx" />
+    <ClInclude Include="..\src\emucore\OSystem.hxx" />
+    <ClInclude Include="..\src\emucore\Paddles.hxx" />
+    <ClInclude Include="..\src\emucore\Props.hxx" />
+    <ClInclude Include="..\src\emucore\PropsSet.hxx" />
+    <ClInclude Include="..\src\emucore\Random.hxx" />
+    <ClInclude Include="..\src\emucore\rsynth\config.h" />
+    <ClInclude Include="..\src\emucore\rsynth\darray.h" />
+    <ClInclude Include="..\src\emucore\rsynth\phfeat.h" />
+    <ClInclude Include="..\src\emucore\rsynth\phones.h" />
+    <ClInclude Include="..\src\emucore\rsynth\phtoelm.h" />
+    <ClInclude Include="..\src\emucore\rsynth\rsynth.h" />
+    <ClInclude Include="..\src\emucore\rsynth\trie.h" />
+    <ClInclude Include="..\src\emucore\rsynth\useconfig.h" />
+    <ClInclude Include="..\src\emucore\Serializer.hxx" />
+    <ClInclude Include="..\src\emucore\Settings.hxx" />
+    <ClInclude Include="..\src\emucore\Sound.hxx" />
+    <ClInclude Include="..\src\emucore\SpeakJet.hxx" />
+    <ClInclude Include="..\src\emucore\Switches.hxx" />
+    <ClInclude Include="..\src\emucore\TIA.hxx" />
+    <ClInclude Include="..\src\emucore\TIASnd.hxx" />
+    <ClInclude Include="..\src\emucore\unzip.h" />
+    <ClInclude Include="..\src\environment\ale_ram.hpp" />
+    <ClInclude Include="..\src\environment\ale_screen.hpp" />
+    <ClInclude Include="..\src\environment\ale_state.hpp" />
+    <ClInclude Include="..\src\environment\phosphor_blend.hpp" />
+    <ClInclude Include="..\src\environment\stella_environment.hpp" />
+    <ClInclude Include="..\src\external\TinyMT\tinymt32.h" />
+    <ClInclude Include="..\src\games\Roms.hpp" />
+    <ClInclude Include="..\src\games\RomSettings.hpp" />
+    <ClInclude Include="..\src\games\RomUtils.hpp" />
+    <ClInclude Include="..\src\games\supported\AirRaid.hpp" />
+    <ClInclude Include="..\src\games\supported\Alien.hpp" />
+    <ClInclude Include="..\src\games\supported\Amidar.hpp" />
+    <ClInclude Include="..\src\games\supported\Assault.hpp" />
+    <ClInclude Include="..\src\games\supported\Asterix.hpp" />
+    <ClInclude Include="..\src\games\supported\Asteroids.hpp" />
+    <ClInclude Include="..\src\games\supported\Atlantis.hpp" />
+    <ClInclude Include="..\src\games\supported\BankHeist.hpp" />
+    <ClInclude Include="..\src\games\supported\BattleZone.hpp" />
+    <ClInclude Include="..\src\games\supported\BeamRider.hpp" />
+    <ClInclude Include="..\src\games\supported\Berzerk.hpp" />
+    <ClInclude Include="..\src\games\supported\Bowling.hpp" />
+    <ClInclude Include="..\src\games\supported\Boxing.hpp" />
+    <ClInclude Include="..\src\games\supported\Breakout.hpp" />
+    <ClInclude Include="..\src\games\supported\Carnival.hpp" />
+    <ClInclude Include="..\src\games\supported\Centipede.hpp" />
+    <ClInclude Include="..\src\games\supported\ChopperCommand.hpp" />
+    <ClInclude Include="..\src\games\supported\CrazyClimber.hpp" />
+    <ClInclude Include="..\src\games\supported\Defender.hpp" />
+    <ClInclude Include="..\src\games\supported\DemonAttack.hpp" />
+    <ClInclude Include="..\src\games\supported\DonkeyKong.hpp" />
+    <ClInclude Include="..\src\games\supported\DoubleDunk.hpp" />
+    <ClInclude Include="..\src\games\supported\ElevatorAction.hpp" />
+    <ClInclude Include="..\src\games\supported\Enduro.hpp" />
+    <ClInclude Include="..\src\games\supported\FishingDerby.hpp" />
+    <ClInclude Include="..\src\games\supported\Freeway.hpp" />
+    <ClInclude Include="..\src\games\supported\Frogger.hpp" />
+    <ClInclude Include="..\src\games\supported\Frostbite.hpp" />
+    <ClInclude Include="..\src\games\supported\Galaxian.hpp" />
+    <ClInclude Include="..\src\games\supported\Gopher.hpp" />
+    <ClInclude Include="..\src\games\supported\Gravitar.hpp" />
+    <ClInclude Include="..\src\games\supported\Hero.hpp" />
+    <ClInclude Include="..\src\games\supported\IceHockey.hpp" />
+    <ClInclude Include="..\src\games\supported\JamesBond.hpp" />
+    <ClInclude Include="..\src\games\supported\JourneyEscape.hpp" />
+    <ClInclude Include="..\src\games\supported\Kangaroo.hpp" />
+    <ClInclude Include="..\src\games\supported\KeystoneKapers.hpp" />
+    <ClInclude Include="..\src\games\supported\Kingkong.hpp" />
+    <ClInclude Include="..\src\games\supported\Koolaid.hpp" />
+    <ClInclude Include="..\src\games\supported\Krull.hpp" />
+    <ClInclude Include="..\src\games\supported\KungFuMaster.hpp" />
+    <ClInclude Include="..\src\games\supported\LaserGates.hpp" />
+    <ClInclude Include="..\src\games\supported\LostLuggage.hpp" />
+    <ClInclude Include="..\src\games\supported\MontezumaRevenge.hpp" />
+    <ClInclude Include="..\src\games\supported\MrDo.hpp" />
+    <ClInclude Include="..\src\games\supported\MsPacman.hpp" />
+    <ClInclude Include="..\src\games\supported\NameThisGame.hpp" />
+    <ClInclude Include="..\src\games\supported\Phoenix.hpp" />
+    <ClInclude Include="..\src\games\supported\Pitfall.hpp" />
+    <ClInclude Include="..\src\games\supported\Pong.hpp" />
+    <ClInclude Include="..\src\games\supported\Pooyan.hpp" />
+    <ClInclude Include="..\src\games\supported\PrivateEye.hpp" />
+    <ClInclude Include="..\src\games\supported\QBert.hpp" />
+    <ClInclude Include="..\src\games\supported\RiverRaid.hpp" />
+    <ClInclude Include="..\src\games\supported\RoadRunner.hpp" />
+    <ClInclude Include="..\src\games\supported\RoboTank.hpp" />
+    <ClInclude Include="..\src\games\supported\Seaquest.hpp" />
+    <ClInclude Include="..\src\games\supported\SirLancelot.hpp" />
+    <ClInclude Include="..\src\games\supported\Skiing.hpp" />
+    <ClInclude Include="..\src\games\supported\Solaris.hpp" />
+    <ClInclude Include="..\src\games\supported\SpaceInvaders.hpp" />
+    <ClInclude Include="..\src\games\supported\StarGunner.hpp" />
+    <ClInclude Include="..\src\games\supported\Tennis.hpp" />
+    <ClInclude Include="..\src\games\supported\Tetris.hpp" />
+    <ClInclude Include="..\src\games\supported\TimePilot.hpp" />
+    <ClInclude Include="..\src\games\supported\Trondead.hpp" />
+    <ClInclude Include="..\src\games\supported\Turmoil.hpp" />
+    <ClInclude Include="..\src\games\supported\Tutankham.hpp" />
+    <ClInclude Include="..\src\games\supported\UpNDown.hpp" />
+    <ClInclude Include="..\src\games\supported\Venture.hpp" />
+    <ClInclude Include="..\src\games\supported\VideoPinball.hpp" />
+    <ClInclude Include="..\src\games\supported\WizardOfWor.hpp" />
+    <ClInclude Include="..\src\games\supported\YarsRevenge.hpp" />
+    <ClInclude Include="..\src\games\supported\Zaxxon.hpp" />
+    <ClInclude Include="..\src\os_dependent\OSystemWin32.hxx" />
+    <ClInclude Include="..\src\os_dependent\SettingsUNIX.hxx" />
+    <ClInclude Include="..\src\os_dependent\SettingsWin32.hxx" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4FD5A07E-F5E9-4DDF-810E-BA4B971DA8B2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>ALE</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\dependencies\dll_win_x64\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\dependencies\lib_win_x64\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)\dependencies\include;..\src;..\src\agents;..\src\common;..\src\controllers;..\src\emucore;..\src\emucore\m6502;..\src\emucore\m6502\src;..\src\emucore\m6502\src\bspf;..\src\emucore\m6502\src\bspf\src;..\src\emucore\rsynth;..\src\environment;..\src\external;..\src\games;..\src\games\supported;..\src\os_dependent</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(ProjectDir)\dependencies\lib_win_x64;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(VC_SourcePath);$(ProjectDir);$(SourcePath)</SourcePath>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\dependencies\dll_win_x64\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\dependencies\lib_win_x64\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)\dependencies\include;..\src;..\src\agents;..\src\common;..\src\controllers;..\src\emucore;..\src\emucore\m6502;..\src\emucore\m6502\src;..\src\emucore\m6502\src\bspf;..\src\emucore\m6502\src\bspf\src;..\src\emucore\rsynth;..\src\environment;..\src\external;..\src\games;..\src\games\supported;..\src\os_dependent</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(ProjectDir)\dependencies\lib_win_x64;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(VC_SourcePath);$(ProjectDir);$(SourcePath)</SourcePath>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\common\;$(SolutionDir)\dependencies\include\;$(SolutionDir)\emucore\;$(SolutionDir)\emucore\rsynth\;$(SolutionDir)\emucore\m6502\src\;$(SolutionDir)\emucore\m6502\src\bspf\src\;$(SolutionDir)\external\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>__USE_SDL;BSPF_WIN32;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>
+      </MultiProcessorCompilation>
+      <CallingConvention>StdCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>zdll.lib;zlib.lib;SDL.lib;SDLmain.lib;SDL_gfx.lib;SDL_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)\common\;$(SolutionDir)\dependencies\include\;$(SolutionDir)\emucore\;$(SolutionDir)\emucore\rsynth\;$(SolutionDir)\emucore\m6502\src\;$(SolutionDir)\emucore\m6502\src\bspf\src\;$(SolutionDir)\external\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>__USE_SDL;BSPF_WIN32;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>
+      </MultiProcessorCompilation>
+      <CallingConvention>StdCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>zdll.lib;zlib.lib;SDL.lib;SDLmain.lib;SDL_gfx.lib;SDL_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
