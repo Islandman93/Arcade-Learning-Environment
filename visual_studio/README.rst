@@ -8,7 +8,7 @@ The ALE.sln file contains two VS2013 projects for building the Arcade Learning E
 Quick start
 ===============================
 
-If using for the python interface: First build the ALE project, then build the ale_python_interface project. Then you should be able to do python setup.py
+If using for the python interface: First build the ALE project, then build the ale_python_interface project. Then you should be able to do python winsetup.py install
 
 If using for another reason you probably want an ALE.exe. Right click the ALE project -> properties -> General: Then change the Target Extension and Configuration Type to .exe. Then rebuild the ALE project.
 
