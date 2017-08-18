@@ -70,7 +70,7 @@
     <LinkIncremental>true</LinkIncremental>
     <TargetExt>.dll</TargetExt>
     <IncludePath>$(ProjectDir)/../src;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)/../visual_studio/x64/Release;$(ProjectDir)/../visual_studio/dependencies/lib_win_x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(ProjectDir)/../visual_studio/x64/Debug;$(ProjectDir)/../visual_studio/dependencies/lib_win_x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
